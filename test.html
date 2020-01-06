@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <select id="locations" onchange="giveSelection(this.value, sel2, options2)">
+    
+    <option value="All">ALL locations</option>
+    <option value="Buffalo">Buffalo</option>
+    <option value="Rochester">Rochester</option>
+    <option value="Syracuse">Syracuse</option>
+    <option value="Always" selected class="placeholder">Choose Location</option>
+  </select>
+
+
+  <select id="machine" >
+       
+    <option data-always="Always" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester" data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
+    <option data-always="Always" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256</option>
+    <option data-always="Always" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245</option>
+    <option data-always="Always" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246</option>
+    <option data-always="Always" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275</option>
+    <option data-always="Always" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276</option>
+    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester" data-syracuse="Syracuse" data-always="Always"
+    class="placeholder" value="placeholder">Choose Machine</option>
+   
+   
+  </select>
+
+  <select id="batch" onchange="giveSelection(this.value, sel3, options3)">
+
+    <!-- Different options -->
+    <option value="" selected class="placeholder">Choose Batch</option>
+    <option value=""> ALL batches</option>
+
+    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+        data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
+    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351753">2019112119351753
+    </option>
+    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351754">2019112119351754
+    </option>
+    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351796">2019112119351796
+    </option>
+    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151246" value="2019112119351740">2019112119351740
+    </option>
+    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351799">2019112119351799
+    </option>
+    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275" value="2019112119351712">2019112119351712
+    </option>
+    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276" value="2019112119351777">2019112119351777
+    </option>
+    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="placeholder">Choose
+        Batch</option>    
+    <!-- The rest of the values will be loaded from our script -->
+
+</select>
+
+  <script>
+    var sel1 = document.querySelector('#locations');
+    var sel2 = document.querySelector('#machine');
+    var options2 = sel2.querySelectorAll('option');
+
+    var sel3 = document.querySelector('#batch')
+    var options3 = sel3.querySelectorAll('option');
+
+    function giveSelection(selValue, selValue2, where) {
+      selValue2.innerHTML = '';
+      for (var i = 0; i < where.length; i++) {
+        if (where[i].dataset.all === selValue || where[i].dataset.always === selValue || where[i].dataset.buffalo === selValue || where[i].dataset.rochester === selValue || where[i].dataset.syracuse === selValue || options2[i].dataset.machine === selValue) {
+            selValue2.appendChild(where[i]);
+        }
+      }
+    }
+
+    giveSelection(sel1.value, sel2, options2);
+    giveSelection(sel2.value, sel3, options3);
+
+  </script>
+</body>
+
+</html>
