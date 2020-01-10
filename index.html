@@ -134,7 +134,7 @@ REGELER FOR HTML:
                     <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="placeholder">Choose
+                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="">Choose
                         Machine</option>
 
 
@@ -200,7 +200,7 @@ REGELER FOR HTML:
                     <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276" value="2019112119351777">2019112119351777
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="placeholder">Choose
+                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="">Choose
                         Batch</option>    
                     <!-- The rest of the values will be loaded from our script -->
 
@@ -294,7 +294,7 @@ REGELER FOR HTML:
                             <tr id="tableHeadlines">
 
                                 <!-- The individiual headlines where the first one contains a button -->
-                                <th class="rowButton"><button type="button" class="btn">Export all remaining
+                                <th class="rowButton"><button id="exportPDF" type="button" class="btn ignorePDF">Export all remaining
                                         invoices <img src="img/exportblaa.png" alt="Export icon"
                                             style="padding-left:2em;"></button></th>
                                 <th class="rowDist"> Distributor</th>
@@ -321,7 +321,7 @@ REGELER FOR HTML:
 
 
             <!-- The content for the statistics tab -->
-            <article id="tabs-2"">
+            <article id="tabs-2">
 
                 <section class="flexContainer alignItemsStart dataInfosection">
                     <!-- Section whith info for the data parametres in use -->
@@ -408,6 +408,11 @@ REGELER FOR HTML:
 
     <!-- Script for chart (external source) -->
     <script src="js/chart.js"></script>
+
+    <!-- Script for PDF (external source)-->
+    <script src="js/jspdf.debug.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
 
     <!-- Our script -->
     <script src="js/script.js"></script>
