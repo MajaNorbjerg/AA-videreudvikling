@@ -46,7 +46,7 @@ REGELER FOR HTML:
     <link href="css/style.css" rel="stylesheet">
 
 
- <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
 
 </head>
 
@@ -79,21 +79,28 @@ REGELER FOR HTML:
                 <h3 class="margin"><img src="img/location.png" alt="Location icon"> Location:</h3>
 
                 <!-- Type of input field with a function that changes the location value in the tab windows  -->
-                <select id="locations" onchange="giveSelection(this.value); curLocation(); newTable();">
+                <select id="locations" onchange="giveSelection(this.value, sel2, options2); curLocation(); newTable();">
                     <!-- giveSelection(this.value); -->
 
                     <!-- Different options -->
-                    <!-- <option value="placeholder" selected class="placeholder">Choose Location</option>
+                    <!-- <option value="" selected class="">Choose Location</option>
                     <option value="All">ALL locations</option>
                     <option value="Buffalo">Buffalo</option>
                     <option value="Rochester">Rochester</option>
                     <option value="Syracuse">Syracuse</option> -->
 
+                    <!-- <option value="All">ALL locations</option>
+                    <option value="Buffalo">Buffalo</option>
+                    <option value="Rochester">Rochester</option>
+                    <option value="Syracuse">Syracuse</option>
+                    <option value="" selected class="">Choose Location</option> -->
+
+
                     <option value="All">ALL locations</option>
                     <option value="Buffalo">Buffalo</option>
                     <option value="Rochester">Rochester</option>
                     <option value="Syracuse">Syracuse</option>
-                    <option value="placeholder" selected class="placeholder">Choose Location</option>
+                    <option value="" selected class="placeholder">Choose Location</option>
 
                     <!-- The rest of the values will be loaded from our script -->
 
@@ -110,10 +117,10 @@ REGELER FOR HTML:
                 <h3 class="margin"><img src="img/tandhjul-1.png" alt="Machine icon">Machine:</h3>
 
                 <!-- Type of input field with a function that changes the machine value in the tab windows  -->
-                <select id="machine" onchange="curMachine(); newTable();">
+                <select id="machine" onchange="giveSelection(this.value, sel3, options3); curMachine(); newTable();">
 
                     <!-- Different options -->
-                    <!-- <option data-option="Buffalo" data-option="Rochester" data-option="Syracuse" selected class="placeholder">Choose Machine</option>
+                    <!-- <option data-option="Buffalo" data-option="Rochester" data-option="Syracuse" selected class="">Choose Machine</option>
                     <option data-option="All" data-option="Buffalo" data-option="Rochester" data-option="Syracuse">ALL macines</option>
                     <option data-option="Buffalo">HLZ151256</option>
                     <option data-option="Rochester">HLZ151245</option>
@@ -121,22 +128,34 @@ REGELER FOR HTML:
                     <option data-option="Syracuse">HLZ151275</option>
                     <option data-option="Syracuse">HLZ151276</option> -->
 
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                    <!-- <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245
+                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246
+                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="placeholder">Choose
-                        Machine</option>
+                        data-syracuse="Syracuse" data-always="" class="placeholder" value="">Choose
+                        Machine</option> -->
 
+
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                        data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256</option>
+                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245
+                    </option>
+                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246
+                    </option>
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275</option>
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276</option>
+                    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                        data-syracuse="Syracuse" data-always="" class="placeholder" value="">Choose Machine</option>
 
                     <!-- The rest of the values will be loaded from our script -->
 
@@ -158,7 +177,7 @@ REGELER FOR HTML:
                 
                 giveSelection(sel1.value);</script> -->
 
-            
+
 
             <!-- https://stackoverflow.com/questions/27673937/two-html-select-boxes-linked-to-each-other -->
 
@@ -180,50 +199,71 @@ REGELER FOR HTML:
                 <select id="batch" onchange="curBatch(); newTable();">
 
                     <!-- Different options -->
-                    <option value="" selected class="placeholder">Choose Batch</option>
+                    <!-- <option value="" selected class="">Choose Batch</option>
                     <option value=""> ALL batches</option>
 
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351753">2019112119351753
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
+                        value="2019112119351753">2019112119351753
                     </option>
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351754">2019112119351754
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
+                        value="2019112119351754">2019112119351754
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351796">2019112119351796
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
+                        value="2019112119351796">2019112119351796
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151246" value="2019112119351740">2019112119351740
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151246"
+                        value="2019112119351740">2019112119351740
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351799">2019112119351799
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
+                        value="2019112119351799">2019112119351799
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275" value="2019112119351712">2019112119351712
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275"
+                        value="2019112119351712">2019112119351712
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276" value="2019112119351777">2019112119351777
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276"
+                        value="2019112119351777">2019112119351777
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="placeholder">Choose
-                        Batch</option>    
+                        data-syracuse="Syracuse" data-always="" class="" value="">Choose
+                        Batch</option> -->
+
+
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                        data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine56="HLZ151256"
+                        value="2019112119351753">2019112119351753
+                    </option>
+                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine56="HLZ151256"
+                        value="2019112119351754">2019112119351754
+                    </option>
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine45="HLZ151245"
+                        value="2019112119351796">2019112119351796
+                    </option>
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine46="HLZ151246"
+                        value="2019112119351740">2019112119351740
+                    </option>
+                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine45="HLZ151245"
+                        value="2019112119351799">2019112119351799
+                    </option>
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine75="HLZ151275"
+                        value="2019112119351712">2019112119351712
+                    </option>
+                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine76="HLZ151276"
+                        value="2019112119351777">2019112119351777
+                    </option>
+                    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
+                        data-syracuse="Syracuse" data-always="" data-machine56="HLZ151256" data-machine45="HLZ151245"
+                        data-machine46="HLZ151246" data-machine75="HLZ151275" data-machine76="HLZ151276"
+                        class="placeholder" value="">Choose
+                        Batch</option>
+
                     <!-- The rest of the values will be loaded from our script -->
 
                 </select>
             </form>
-            <script>
-                var sel1 = document.querySelector('#locations');
-                var sel2 = document.querySelector('#machine');
-                var options2 = sel2.querySelectorAll('option');
-
-                function giveSelection(selValue) {
-                    sel2.innerHTML = '';
-                    for (var i = 0; i < options2.length; i++) {
-                        if (options2[i].dataset.all === selValue || options2[i].dataset.always === selValue || options2[
-                                i].dataset.buffalo === selValue || options2[i].dataset
-                            .rochester === selValue || options2[i].dataset.syracuse === selValue) {
-                            sel2.appendChild(options2[i]);
-                        }
-                    }
-                }
-
-                giveSelection(sel1.value);
-            </script>
+            
 
         </aside>
 
@@ -323,17 +363,17 @@ REGELER FOR HTML:
             <!-- The content for the statistics tab -->
             <article id="tabs-2"">
 
-                <section class="flexContainer alignItemsStart dataInfosection">
-                    <!-- Section whith info for the data parametres in use -->
-                    <div class="dataInfo">
-                        <p id="curLocationS">Location:</p>
-                        <p id="curMachineS">Machine:</p>
-                        <p id="curBatchS">Batch:</p>
-                    </div>
-                    <div class="dataInfo">
-                        <p>Date:</p>
-                        <p>Time:</p>
-                    </div>
+                <section class=" flexContainer alignItemsStart dataInfosection">
+                <!-- Section whith info for the data parametres in use -->
+                <div class="dataInfo">
+                    <p id="curLocationS">Location:</p>
+                    <p id="curMachineS">Machine:</p>
+                    <p id="curBatchS">Batch:</p>
+                </div>
+                <div class="dataInfo">
+                    <p>Date:</p>
+                    <p>Time:</p>
+                </div>
                 </section>
 
 
@@ -392,24 +432,24 @@ REGELER FOR HTML:
     </footer>
 
 </body>
-   <!-- Read scripts
+<!-- Read scripts
 ..................................................................... -->
 
-    <!-- Script for using general jQuery (external source) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- Script for using general jQuery (external source) -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-    <!-- Script for UI jQuery (for user interface) (external source) -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Script for UI jQuery (for user interface) (external source) -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- Script for datepicker (external source) -->
-    <script src="js/datepicker.min.js"></script>
-    <!-- Include English language (external source) -->
-    <script src="js/datepicker.en.js"></script>
+<!-- Script for datepicker (external source) -->
+<script src="js/datepicker.min.js"></script>
+<!-- Include English language (external source) -->
+<script src="js/datepicker.en.js"></script>
 
-    <!-- Script for chart (external source) -->
-    <script src="js/chart.js"></script>
+<!-- Script for chart (external source) -->
+<script src="js/chart.js"></script>
 
-    <!-- Our script -->
-    <script src="js/script.js"></script>
+<!-- Our script -->
+<script src="js/script.js"></script>
 
 </html>

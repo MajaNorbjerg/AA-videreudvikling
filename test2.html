@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <select id="locations">
+    
+    <option value="All">ALL locations</option>
+    <option value="Buffalo">Buffalo</option>
+    <option value="Rochester">Rochester</option>
+    <option value="Syracuse">Syracuse</option>
+    <option value="placeholder" selected class="placeholder">Choose Location</option>
+  </select>
+
+
+  <select id="machine">
+       
+    <option value="AllMachines">ALL macines</option>
+    <option value="HLZ151256">HLZ151256</option>
+    <option value="HLZ151245">HLZ151245</option>
+    <option value="HLZ151246">HLZ151246</option>
+    <option value="HLZ151275">HLZ151275</option>
+    <option value="HLZ151276">HLZ151276</option>
+    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester" data-syracuse="Syracuse" data-always="placeholder"
+    class="placeholder" value="placeholder">Choose Machine</option>
+   
+   
+  </select>
+
+  <select id="batch" >
+    <!-- onchange="giveSelection(this.value, sel3, options3)" -->
+
+    <!-- Different options -->
+    <option value="AllMachines">ALL batches</option>
+    <option value="2019112119351753">2019112119351753
+    </option>
+    <option value="2019112119351754">2019112119351754
+    </option>
+    <option value="2019112119351796">2019112119351796
+    </option>
+    <option value="2019112119351740">2019112119351740
+    </option>
+    <option value="2019112119351799">2019112119351799
+    </option>
+    <option value="2019112119351712">2019112119351712
+    </option>
+    <option value="2019112119351777">2019112119351777
+    </option>
+    <option selected class="placeholder" value="placeholder">Choose
+        Batch</option>    
+    <!-- The rest of the values will be loaded from our script -->
+
+</select>
+
+  <script>
+   // Map your choices to your option value
+var lookup = {
+   'All': ['Option 1 - Choice 1', 'Option 1 - Choice 2', 'Option 1 - Choice 3'],
+   'Buffalo': ['Option 2 - Choice 1', 'Option 2 - Choice 2'],
+   'Rochester': ['Option 3 - Choice 1'],
+   'Syracuse': ['Option 2 - Choice 1', 'Option 2 - Choice 2'],
+   'placeholder': ['Option 3 - Choice 1'],
+};
+
+// When an option is changed, search the above for matching choices
+$('#locations').on('change', function() {
+   // Set selected option as variable
+   var selectValue = $(this).val();
+
+   // Empty the target field
+   $('#machine').empty();
+   
+   // For each chocie in the selected option
+   for (i = 0; i < lookup[selectValue].length; i++) {
+      // Output choice in the target field
+      $('#machine').append("<option value='" + lookup[selectValue][i] + "'>" + lookup[selectValue][i] + "</option>");
+   }
+});
+
+  </script>
+</body>
+
+</html>

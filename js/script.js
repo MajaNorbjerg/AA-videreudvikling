@@ -361,7 +361,7 @@ function newTable() {
       cell9.innerHTML = result[12];
 
 
-    } else if ((currentBatch == resBat && currentMachine == resMac && currentLocation == "placeholder") || (currentBatch == resBat && currentMachine == "placeholder" && currentLocation == resLok) || (currentBatch == "placeholder" && currentMachine == resMac && currentLocation == resLok)) {
+    } else if ((currentBatch == resBat && currentMachine == resMac && currentLocation == "") || (currentBatch == resBat && currentMachine == "" && currentLocation == resLok) || (currentBatch == "" && currentMachine == resMac && currentLocation == resLok)) {
       var row = table.insertRow();
 
       var cell1 = row.insertCell(0);
@@ -389,7 +389,7 @@ function newTable() {
 
 
 
-    } else if (currentBatch == resBat && currentMachine == "placeholder" && currentLocation == "placeholder" || currentBatch == "placeholder" && currentMachine == resMac && currentLocation == "placeholder" || currentBatch == "placeholder" && currentMachine == "placeholder" && currentLocation == resLok) {
+    } else if (currentBatch == resBat && currentMachine == "" && currentLocation == "" || currentBatch == "" && currentMachine == resMac && currentLocation == "" || currentBatch == "" && currentMachine == "" && currentLocation == resLok) {
       var row = table.insertRow();
 
       var cell1 = row.insertCell(0);
@@ -444,3 +444,48 @@ function statisticsFunction() {
   liStat.style.fontWeight = "bold";
   liBill.style.fontWeight = "normal";
 }
+
+
+                // var sel1 = document.querySelector('#locations');
+                // var sel2 = document.querySelector('#machine');
+                // var options2 = sel2.querySelectorAll('option');
+
+                // function giveSelection(selValue) {
+                //     sel2.innerHTML = '';
+                //     for (var i = 0; i < options2.length; i++) {
+                //         if (options2[i].dataset.all === selValue || options2[i].dataset.always === selValue || options2[
+                //                 i].dataset.buffalo === selValue || options2[i].dataset
+                //             .rochester === selValue || options2[i].dataset.syracuse === selValue) {
+                //             sel2.appendChild(options2[i]);
+                //         }
+                //     }
+                // }
+
+                // giveSelection(sel1.value);
+
+                var sel1 = document.querySelector('#locations');
+                var sel2 = document.querySelector('#machine');
+                var options2 = sel2.querySelectorAll('option');
+
+                var sel3 = document.querySelector('#batch');
+                // var sel4 = document.querySelector('#machine');
+                var options3 = sel3.querySelectorAll('option');
+
+
+                function giveSelection(selValue, selValue2, where) {
+                    selValue2.innerHTML = '';
+                    for (var i = 0; i < where.length; i++) {
+                        if (where[i].dataset.all === selValue || where[i].dataset.always === selValue || where[i]
+                            .dataset.buffalo === selValue || where[i].dataset.rochester === selValue || where[i].dataset
+                            .syracuse === selValue || where[i].dataset.machine56 === selValue || where[i].dataset
+                            .machine45 === selValue || where[i].dataset.machine46 === selValue || where[i].dataset
+                            .machine75 === selValue || where[i].dataset.machine76 === selValue) {
+                            selValue2.appendChild(where[i]);
+                        }
+                    }
+                }
+
+                giveSelection(sel1.value, sel2, options2);
+                giveSelection(sel1.value, sel3, options3);
+                giveSelection(sel2.value, sel3, options3);
+          
