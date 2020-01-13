@@ -334,7 +334,7 @@ REGELER FOR HTML:
                             <tr id="tableHeadlines">
 
                                 <!-- The individiual headlines where the first one contains a button -->
-                                <th class="rowButton"><button type="button" class="btn">Export all remaining
+                                <th class="rowButton"><button id="exportPDF" type="button" class="btn ignorePDF">Export all remaining
                                         invoices <img src="img/exportblaa.png" alt="Export icon"
                                             style="padding-left:2em;"></button></th>
                                 <th class="rowDist"> Distributor</th>
@@ -361,7 +361,7 @@ REGELER FOR HTML:
 
 
             <!-- The content for the statistics tab -->
-            <article id="tabs-2"">
+            <article id="tabs-2">
 
                 <section class=" flexContainer alignItemsStart dataInfosection">
                 <!-- Section whith info for the data parametres in use -->
@@ -449,7 +449,12 @@ REGELER FOR HTML:
 <!-- Script for chart (external source) -->
 <script src="js/chart.js"></script>
 
-<!-- Our script -->
-<script src="js/script.js"></script>
+    <!-- Script for PDF (external source)-->
+    <script src="js/jspdf.debug.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- Our script -->
+    <script src="js/script.js"></script>
 
 </html>
