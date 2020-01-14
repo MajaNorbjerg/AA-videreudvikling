@@ -331,7 +331,7 @@ section {
     width: 40%;
 }
 
-#distInput {
+#distInput, #measureInput {
     padding-top: 2em;
     padding-bottom: 1em;
     width: 40%;

@@ -83,19 +83,6 @@ REGELER FOR HTML:
                     <!-- giveSelection(this.value); -->
 
                     <!-- Different options -->
-                    <!-- <option value="" selected class="">Choose Location</option>
-                    <option value="All">ALL locations</option>
-                    <option value="Buffalo">Buffalo</option>
-                    <option value="Rochester">Rochester</option>
-                    <option value="Syracuse">Syracuse</option> -->
-
-                    <!-- <option value="All">ALL locations</option>
-                    <option value="Buffalo">Buffalo</option>
-                    <option value="Rochester">Rochester</option>
-                    <option value="Syracuse">Syracuse</option>
-                    <option value="" selected class="">Choose Location</option> -->
-
-
                     <option value="All">ALL locations</option>
                     <option value="Buffalo">Buffalo</option>
                     <option value="Rochester">Rochester</option>
@@ -120,31 +107,6 @@ REGELER FOR HTML:
                 <select id="machine" onchange="giveSelection(this.value, sel3, options3); curMachine(); newTable();">
 
                     <!-- Different options -->
-                    <!-- <option data-option="Buffalo" data-option="Rochester" data-option="Syracuse" selected class="">Choose Machine</option>
-                    <option data-option="All" data-option="Buffalo" data-option="Rochester" data-option="Syracuse">ALL macines</option>
-                    <option data-option="Buffalo">HLZ151256</option>
-                    <option data-option="Rochester">HLZ151245</option>
-                    <option data-option="Rochester">HLZ151246</option>
-                    <option data-option="Syracuse">HLZ151275</option>
-                    <option data-option="Syracuse">HLZ151276</option> -->
-
-                    <!-- <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
-                    <option data-always="" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256
-                    </option>
-                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245
-                    </option>
-                    <option data-always="" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246
-                    </option>
-                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275
-                    </option>
-                    <option data-always="" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276
-                    </option>
-                    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="" class="placeholder" value="">Choose
-                        Machine</option> -->
-
-
                     <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
                     <option data-always="" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256</option>
@@ -162,24 +124,10 @@ REGELER FOR HTML:
                 </select>
             </form>
 
-            <!-- <script>var sel1 = document.querySelector('#locations');
-                var sel2 = document.querySelector('#machine');
-                var options2 = sel2.querySelectorAll('option');
-                
-                function giveSelection(selValue) {
-                  sel2.innerHTML = '';
-                  for(var i = 0; i < options2.length; i++) {
-                    if(options2[i].dataset.option === selValue) {
-                      sel2.appendChild(options2[i]);
-                    }
-                  }
-                }
-                
-                giveSelection(sel1.value);</script> -->
+           
 
 
 
-            <!-- https://stackoverflow.com/questions/27673937/two-html-select-boxes-linked-to-each-other -->
 
 
             <!-- Label with icon for Dates -->
@@ -199,37 +147,6 @@ REGELER FOR HTML:
                 <select id="batch" onchange="curBatch(); newTable();">
 
                     <!-- Different options -->
-                    <!-- <option value="" selected class="">Choose Batch</option>
-                    <option value=""> ALL batches</option>
-
-                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
-                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
-                        value="2019112119351753">2019112119351753
-                    </option>
-                    <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
-                        value="2019112119351754">2019112119351754
-                    </option>
-                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
-                        value="2019112119351796">2019112119351796
-                    </option>
-                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151246"
-                        value="2019112119351740">2019112119351740
-                    </option>
-                    <option data-always="" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
-                        value="2019112119351799">2019112119351799
-                    </option>
-                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275"
-                        value="2019112119351712">2019112119351712
-                    </option>
-                    <option data-always="" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276"
-                        value="2019112119351777">2019112119351777
-                    </option>
-                    <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
-                        data-syracuse="Syracuse" data-always="" class="" value="">Choose
-                        Batch</option> -->
-
-
                     <option data-always="" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
                     <option data-always="" data-all="All" data-buffalo="Buffalo" data-machine56="HLZ151256"
@@ -362,7 +279,7 @@ REGELER FOR HTML:
 
 
             <!-- The content for the statistics tab -->
-            <article id="tabs-2">
+            <article id="tabs-2" class="flexContainer spaceBetween">
 
                 <section class=" flexContainer alignItemsStart dataInfosection">
                 <!-- Section whith info for the data parametres in use -->
@@ -377,14 +294,14 @@ REGELER FOR HTML:
                 </div>
                 </section>
 
-                <section>
+                <section id="measureInput">
                     <p>Get an overview of the different materials in number of units, or the weight of the units in kg /Ton, or the number op bags.</p>
-                    <select id="dropdown">
-                        <option value="" selected class="placeholder">Choose measuring unit</option>
-                        <option data-always="ChooseWeight" data-kg="piece">Number of units</option>
-                        <option data-always="ChooseWeight" data-kg="Kg">Weight in kg</option>
-                        <option data-always="ChooseWeight" data-kg="Tons">Weight in ton</option>
-                        <option data-always="ChooseWeight" data-kg="Bags">Number of bags</option>
+                    <select id="dropdown" onchange="statistics()">
+                        <!--<option value="" selected class="placeholder">Choose measuring unit</option> -->
+                        <option data-always="ChooseWeight" data-kg="piece" value="unit">Number of units</option>
+                        <option data-always="ChooseWeight" data-kg="Kg" value="kg">Weight in kg</option>
+                        <option data-always="ChooseWeight" data-kg="Tons" value="ton">Weight in ton</option>
+                        <option data-always="ChooseWeight" data-kg="Bags" value="bag">Number of bags</option>
                     </select>
                 </section>
 
@@ -459,8 +376,7 @@ REGELER FOR HTML:
 <!-- Include English language (external source) -->
 <script src="js/datepicker.en.js"></script>
 
-<!-- Script for chart (external source) -->
-<script src="js/chart.js"></script>
+
 
 <!-- Script for PDF (external source)-->
 <script src="js/jspdf.debug.js"></script>
@@ -469,5 +385,8 @@ REGELER FOR HTML:
 
 <!-- Our script -->
 <script src="js/script.js"></script>
+
+<!-- Script for chart (external source) -->
+<script src="js/chart.js"></script>
 
 </html>

@@ -6,9 +6,10 @@ var data = {
   series: [
     {
       label: '2012',
-      values: [1447, 758, 189, 2298, 117, 165, 12]
+      values: [val1, val2, val3, val4, val5, val6, val7]
     },]
 };
+
 
 var chartWidth       = 700,
     barHeight        = 50,
@@ -91,3 +92,4 @@ chart.append("g")
       .attr("class", "y axis")
       .attr("transform", "translate(" + spaceForLabels + ", " + -gapBetweenGroups/2 + ")")
       .call(yAxis);
+    
