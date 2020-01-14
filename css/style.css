@@ -177,7 +177,9 @@ button {
     align-items: flex-start;
 }
 
-.flexEnd{justify-content: flex-end;}
+.flexEnd {
+    justify-content: center;
+}
 
 /* General padding & margin
 ..................................................*/
@@ -237,9 +239,9 @@ select {
 
 
 select option:checked {
-    background-color: var(--lightBlueFaded) ;
+    background-color: var(--lightBlueFaded);
     /* for IE */
-    color: var(--darkBlue) ;
+    color: var(--darkBlue);
 }
 
 select:hover {
@@ -370,12 +372,12 @@ strong {
 .rowAlu,
 .rowPet,
 .rowHdpe,
-.rowGlass
- {
+.rowGlass {
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 30%;
 }
+
 .rowOtherP,
 .rowOtherM {
     background-position: right bottom;
@@ -467,7 +469,8 @@ tr:hover {
 }
 
 /* Make coloumn 2 and 3 bold on hover */
-tr:hover > td:nth-child(2), tr:hover > td:nth-child(3){
+tr:hover>td:nth-child(2),
+tr:hover>td:nth-child(3) {
     font-weight: bold;
 }
 
@@ -500,8 +503,13 @@ tr:hover > td:nth-child(2), tr:hover > td:nth-child(3){
     background: var(--grey);
 }
 
-.btn:visited {background: var(--grey);}
-.btn:focus {background: var(--grey);}
+.btn:visited {
+    background: var(--grey);
+}
+
+.btn:focus {
+    background: var(--grey);
+}
 
 
 
@@ -526,8 +534,13 @@ tr:hover > td:nth-child(2), tr:hover > td:nth-child(3){
     width: 70%;
 }
 
-.statisticsInfo{
+.statisticsInfo {
     margin-top: 1em;
+}
+
+#dropdown {
+    width: 150px;
+    margin: 20px 525px;
 }
 
 /* Chart (external css)
@@ -535,6 +548,7 @@ tr:hover > td:nth-child(2), tr:hover > td:nth-child(3){
 #chart {
     width: 70%;
 }
+
 .chart rect {
     fill: var(--lightBlueFaded);
 }
@@ -561,4 +575,14 @@ tr:hover > td:nth-child(2), tr:hover > td:nth-child(3){
     shape-rendering: crispEdges;
 }
 
-#exportStatistics{width: 13%; margin: 2em auto 0;}
+#exportStatistics, #exportStatisticsPicture {
+    width: 15%;
+    margin: 0 2%;
+}
+
+#exportStatistics img, #exportStatisticsPicture img {
+    padding-left:1em;}
+
+
+
+

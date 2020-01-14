@@ -46,7 +46,7 @@ REGELER FOR HTML:
     <link href="css/style.css" rel="stylesheet">
 
 
- <!-- SCRIPTS -->
+    <!-- SCRIPTS -->
 
 </head>
 
@@ -125,13 +125,17 @@ REGELER FOR HTML:
                         data-syracuse="Syracuse" value="AllMachines">ALL macines</option>
                     <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" value="HLZ151256">HLZ151256
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151245">HLZ151245
+                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151245">
+                        HLZ151245
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151246">HLZ151246
+                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" value="HLZ151246">
+                        HLZ151246
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151275">HLZ151275
+                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151275">
+                        HLZ151275
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151276">HLZ151276
+                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" value="HLZ151276">
+                        HLZ151276
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="">Choose
@@ -158,7 +162,7 @@ REGELER FOR HTML:
                 
                 giveSelection(sel1.value);</script> -->
 
-            
+
 
             <!-- https://stackoverflow.com/questions/27673937/two-html-select-boxes-linked-to-each-other -->
 
@@ -185,23 +189,30 @@ REGELER FOR HTML:
 
                     <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" value="AllMachines">ALL batches</option>
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351753">2019112119351753
+                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
+                        value="2019112119351753">2019112119351753
                     </option>
-                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256" value="2019112119351754">2019112119351754
+                    <option data-always="placeholder" data-all="All" data-buffalo="Buffalo" data-machine="HLZ151256"
+                        value="2019112119351754">2019112119351754
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351796">2019112119351796
+                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
+                        value="2019112119351796">2019112119351796
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151246" value="2019112119351740">2019112119351740
+                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151246"
+                        value="2019112119351740">2019112119351740
                     </option>
-                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245" value="2019112119351799">2019112119351799
+                    <option data-always="placeholder" data-all="All" data-rochester="Rochester" data-machine="HLZ151245"
+                        value="2019112119351799">2019112119351799
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275" value="2019112119351712">2019112119351712
+                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151275"
+                        value="2019112119351712">2019112119351712
                     </option>
-                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276" value="2019112119351777">2019112119351777
+                    <option data-always="placeholder" data-all="All" data-syracuse="Syracuse" data-machine="HLZ151276"
+                        value="2019112119351777">2019112119351777
                     </option>
                     <option selected data-all="All" data-buffalo="Buffalo" data-rochester="Rochester"
                         data-syracuse="Syracuse" data-always="placeholder" class="placeholder" value="">Choose
-                        Batch</option>    
+                        Batch</option>
                     <!-- The rest of the values will be loaded from our script -->
 
                 </select>
@@ -294,7 +305,8 @@ REGELER FOR HTML:
                             <tr id="tableHeadlines">
 
                                 <!-- The individiual headlines where the first one contains a button -->
-                                <th class="rowButton"><button id="exportPDF" type="button" class="btn ignorePDF">Export all remaining
+                                <th class="rowButton"><button id="exportPDF" type="button" class="btn ignorePDF">Export
+                                        all remaining
                                         invoices <img src="img/exportblaa.png" alt="Export icon"
                                             style="padding-left:2em;"></button></th>
                                 <th class="rowDist"> Distributor</th>
@@ -336,6 +348,16 @@ REGELER FOR HTML:
                     </div>
                 </section>
 
+                <section>
+                    <p>Get an overview of the different materials in number of units, or the weight of the units in kg /
+                        ton</p>
+                    <select id="dropdown">
+                        <option data-always="Choose Weight" data-kg="piece">Number of units</option>
+                        <option data-always="Choose Weight" data-kg="Kg">Kg</option>
+                        <option data-always="Choose Weight" data-kg="Tons">Ton</option>
+
+                    </select>
+                </section>
 
                 <section class="flexContainer alignItemsCenter statisticsInfo">
                     <div id="iconStatistics">
@@ -373,8 +395,10 @@ REGELER FOR HTML:
                 </section>
 
                 <section class="flexContainer flexEnd">
-                    <button id="exportStatistics" class="btn">Export statistics<img src="img/exportblaa.png"
-                            alt="Export icon" style="padding-left:1em;"></button>
+                    <button id="exportStatistics" class="btn">Export statistics to exel<img src="img/exportblaa.png"
+                            alt="Export icon"></button>
+                    <button id="exportStatisticsPicture" class="btn">Export statistics as png<img src="img/exportblaa.png"
+                            alt="Export icon"></button>
                 </section>
 
             </article>
@@ -392,29 +416,29 @@ REGELER FOR HTML:
     </footer>
 
 </body>
-   <!-- Read scripts
+<!-- Read scripts
 ..................................................................... -->
 
-    <!-- Script for using general jQuery (external source) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- Script for using general jQuery (external source) -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-    <!-- Script for UI jQuery (for user interface) (external source) -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Script for UI jQuery (for user interface) (external source) -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <!-- Script for datepicker (external source) -->
-    <script src="js/datepicker.min.js"></script>
-    <!-- Include English language (external source) -->
-    <script src="js/datepicker.en.js"></script>
+<!-- Script for datepicker (external source) -->
+<script src="js/datepicker.min.js"></script>
+<!-- Include English language (external source) -->
+<script src="js/datepicker.en.js"></script>
 
-    <!-- Script for chart (external source) -->
-    <script src="js/chart.js"></script>
+<!-- Script for chart (external source) -->
+<script src="js/chart.js"></script>
 
-    <!-- Script for PDF (external source)-->
-    <script src="js/jspdf.debug.js"></script>
-    <script src="js/jspdf.min.js"></script>
-    <script src="js/jspdf.plugin.autotable.min.js"></script>
+<!-- Script for PDF (external source)-->
+<script src="js/jspdf.debug.js"></script>
+<script src="js/jspdf.min.js"></script>
+<script src="js/jspdf.plugin.autotable.min.js"></script>
 
-    <!-- Our script -->
-    <script src="js/script.js"></script>
+<!-- Our script -->
+<script src="js/script.js"></script>
 
 </html>
