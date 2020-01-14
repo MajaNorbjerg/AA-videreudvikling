@@ -539,8 +539,8 @@ tr:hover>td:nth-child(3) {
 }
 
 #dropdown {
-    width: 150px;
-    margin: 20px 525px;
+    width: 200px;
+    margin: 2% 42%;
 }
 
 /* Chart (external css)
@@ -586,3 +586,14 @@ tr:hover>td:nth-child(3) {
 
 
 
+/* Admin page */
+#settingsContainer{
+    width: 70%;
+    height: 90vh;
+    margin: 2% auto;
+    padding: 1%;
+    background-color: var(--white);}
+
+#settingsContainer p{
+    padding: 2% 0;
+}
