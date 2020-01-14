@@ -1,12 +1,12 @@
 var data = {
   labels: [
     'ALU', 'PET', 'HDPE', 'Glass',
-    'Other plastics', 'Other material'
+    'Other plastics', 'Other material', 'NO_READ'
   ],
   series: [
     {
       label: '2012',
-      values: [1447, 758, 189, 2298, 117, 165]
+      values: [1447, 758, 189, 2298, 117, 165, 12]
     },]
 };
 
@@ -64,11 +64,16 @@ bar.append("rect")
 
 // Add text label in bar
 bar.append("text")
-    .attr("x", function(d) { return x(d) - 7; })
+    .attr("x", function(d) 
+    {
+      if (d>115) return x(d) - 7;
+      else return x(d) +20;
+    })
     .attr("y", barHeight / 2)
     .attr("fill", "red")
     .attr("dy", ".35em")
     .text(function(d) { return d; });
+
 
 // Draw labels
 bar.append("text")
