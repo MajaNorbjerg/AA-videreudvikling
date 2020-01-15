@@ -124,7 +124,7 @@ REGELER FOR HTML:
                 </select>
             </form>
 
-           
+
 
 
 
@@ -180,7 +180,7 @@ REGELER FOR HTML:
 
                 </select>
             </form>
-            
+
 
         </aside>
 
@@ -238,6 +238,12 @@ REGELER FOR HTML:
                 <section id="distInput">
                     <input type="text" id="myInput" onkeyup="sortTable()" placeholder="Search for distributors.."
                         title="Type in a name" autocomplete="off">
+                    <select id="billingUnits" onchange="billingUnits()">
+                        <!--<option value="" selected class="placeholder">Choose measuring unit</option> -->
+                        <option value="units">Number of units</option>
+                        <option value="bags">Number of bags</option>
+                    </select>
+
                 </section>
 
                 <!-- Section with the table -->
@@ -282,26 +288,27 @@ REGELER FOR HTML:
             <article id="tabs-2" class="flexContainer spaceBetween">
 
                 <section class=" flexContainer alignItemsStart dataInfosection">
-                <!-- Section whith info for the data parametres in use -->
-                <div class="dataInfo">
-                    <p id="curLocationS">Location:</p>
-                    <p id="curMachineS">Machine:</p>
-                    <p id="curBatchS">Batch:</p>
-                </div>
-                <div class="dataInfo">
-                    <p>Date:</p>
-                    <p>Time:</p>
-                </div>
+                    <!-- Section whith info for the data parametres in use -->
+                    <div class="dataInfo">
+                        <p id="curLocationS">Location:</p>
+                        <p id="curMachineS">Machine:</p>
+                        <p id="curBatchS">Batch:</p>
+                    </div>
+                    <div class="dataInfo">
+                        <p>Date:</p>
+                        <p>Time:</p>
+                    </div>
                 </section>
 
                 <section id="measureInput">
-                    <p>Get an overview of the different materials in number of units, or the weight of the units in kg /Ton, or the number op bags.</p>
+                    <p class="infoText">Get an overview of the different materials in number of units, or the weight of
+                        the units in kg /Ton, or the number op bags.</p>
                     <select id="dropdown" onchange="statistics()">
                         <!--<option value="" selected class="placeholder">Choose measuring unit</option> -->
-                        <option data-always="ChooseWeight" data-kg="piece" value="unit">Number of units</option>
-                        <option data-always="ChooseWeight" data-kg="Kg" value="kg">Weight in kg</option>
-                        <option data-always="ChooseWeight" data-kg="Tons" value="ton">Weight in ton</option>
-                        <option data-always="ChooseWeight" data-kg="Bags" value="bag">Number of bags</option>
+                        <option value="unit">Number of units</option>
+                        <option value="kg">Weight in kg</option>
+                        <option value="ton">Weight in ton</option>
+                        <option value="bag">Number of bags</option>
                     </select>
                 </section>
 
@@ -343,8 +350,8 @@ REGELER FOR HTML:
                 <section class="flexContainer flexEnd">
                     <button id="exportStatistics" class="btn">Export statistics to exel<img src="img/exportblaa.png"
                             alt="Export icon"></button>
-                    <button id="exportStatisticsPicture" class="btn">Export statistics as png<img src="img/exportblaa.png"
-                            alt="Export icon"></button>
+                    <button id="exportStatisticsPicture" class="btn">Export statistics as png<img
+                            src="img/exportblaa.png" alt="Export icon"></button>
                 </section>
 
             </article>
@@ -376,7 +383,8 @@ REGELER FOR HTML:
 <!-- Include English language (external source) -->
 <script src="js/datepicker.en.js"></script>
 
-
+<!-- Script for chart (external source) -->
+<script src="js/chart.js"></script>
 
 <!-- Script for PDF (external source)-->
 <script src="js/jspdf.debug.js"></script>
@@ -386,7 +394,5 @@ REGELER FOR HTML:
 <!-- Our script -->
 <script src="js/script.js"></script>
 
-<!-- Script for chart (external source) -->
-<script src="js/chart.js"></script>
 
 </html>

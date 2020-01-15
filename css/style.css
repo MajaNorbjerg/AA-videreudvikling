@@ -135,6 +135,7 @@ a {
     font-style: italic;
 }
 
+.infoText {font-size: 0.7em;}
 
 /* Text for the table
 ...............................*/
@@ -540,10 +541,10 @@ tr:hover>td:nth-child(3) {
     margin-top: 1em;
 }
 
-#dropdown {
+/* #dropdown {
     width: 200px;
     margin: 2% 42%;
-}
+} */
 
 /* Chart (external css)
 ...........*/
