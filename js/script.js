@@ -330,36 +330,37 @@ function newTable() {
   curBatch();
 
   var all = "All";
-  
+
 
   if (currentLocation == all) {
     for (var i = 0; i < pricatMNJ.length; i++) {
 
       var result = sortPricatMNJ(pricatMNJ[i]);
-    var row = table.insertRow();
+      var row = table.insertRow();
 
-    var cell1 = row.insertCell(0);
-    var cell2 = row.insertCell(1);
-    var cell3 = row.insertCell(2);
-    var cell4 = row.insertCell(3);
-    var cell5 = row.insertCell(4);
-    var cell6 = row.insertCell(5);
-    var cell7 = row.insertCell(6);
-    var cell8 = row.insertCell(7);
-    var cell9 = row.insertCell(8);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+      var cell4 = row.insertCell(3);
+      var cell5 = row.insertCell(4);
+      var cell6 = row.insertCell(5);
+      var cell7 = row.insertCell(6);
+      var cell8 = row.insertCell(7);
+      var cell9 = row.insertCell(8);
 
-    // var result = sortPricatMNJ(pricatMNJ[i]);
+      // var result = sortPricatMNJ(pricatMNJ[i]);
 
-    // Insert data to the cells from pricat
-    cell1.innerHTML = '<button type="button" class="btn">Export invoice <img src="img/exportblaa.png" alt="Export icon" style="padding-left:1em;"></button>';
-    cell2.innerHTML = result[3];
-    cell3.innerHTML = result[6];
-    cell4.innerHTML = result[7];
-    cell5.innerHTML = result[8];
-    cell6.innerHTML = result[9];
-    cell7.innerHTML = result[10];
-    cell8.innerHTML = result[11];
-    cell9.innerHTML = result[12];}
+      // Insert data to the cells from pricat
+      cell1.innerHTML = '<button type="button" class="btn">Export invoice <img src="img/exportblaa.png" alt="Export icon" style="padding-left:1em;"></button>';
+      cell2.innerHTML = result[3];
+      cell3.innerHTML = result[6];
+      cell4.innerHTML = result[7];
+      cell5.innerHTML = result[8];
+      cell6.innerHTML = result[9];
+      cell7.innerHTML = result[10];
+      cell8.innerHTML = result[11];
+      cell9.innerHTML = result[12];
+    }
   };
 
   // Run thrugh pricat and insert row and cells in the table for each data string
@@ -370,7 +371,7 @@ function newTable() {
     var resLok = result[0];
     var resMac = result[1];
     var resBat = result[2];
-    
+
 
     if (currentBatch == resBat && currentMachine == resMac && currentLocation == resLok) {
       var row = table.insertRow();
@@ -604,25 +605,25 @@ giveSelection(sel1.value, sel2, options2);
 giveSelection(sel1.value, sel3, options3);
 giveSelection(sel2.value, sel3, options3);
 
-var val0 = 1802
-var val1 = val0 + 1250;
-var val2 = val0 + 842;
-var val3 = val0 - 259;
-var val4 = val0 + 4;
-var val5 = val0 + 2236;
-var val6 = val0 - 596;
-var val7 = val0 - 1762;
 // Values for statistics
-function statistics(){
-  measure = document.getElementById("dropdown").value;
-  if(measure == kg) {
-    val1 = val1/2;
-    val2 = val2/2;
-    val3 = val3/2;
-    val4 = val4/2;
-    val5 = val5/2;
-    val6 = val6/2;
-    val7 = val7/2;
-  }
-  else{}
+function billingUnits() {
+  unit = document.getElementById("billingUnits").value;
+  if (unit == "units") {
+    var result = sortPricatMNJ(pricatMNJ[i]);
+var g = 2;
+
+    result[3]/g;
+    result[6]/g;
+    result[7]/g;
+    result[8]/g;
+    result[9]/g;
+    result[10]/g;
+    result[11]/g;
+    result[12]/g;
+
+    // newTable()
+  } 
+  // else if (unit == "bags") {} else {}
+
+
 }
