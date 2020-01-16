@@ -469,19 +469,37 @@ function newTable() {
 function billingFunction() {
   var liStat = document.getElementById("liStatistics");
   var liBill = document.getElementById("liBilling");
+  var liPerf = document.getElementById("liPerformance");
   liStat.style.backgroundColor = "var(--grey)";
   liBill.style.backgroundColor = "transparent";
+  liPerf.style.backgroundColor = "var(--grey)";
   liBill.style.fontWeight = "bold";
   liStat.style.fontWeight = "normal";
+  liPerf.style.fontWeight = "normal";
 }
 
 function statisticsFunction() {
   var liStat = document.getElementById("liStatistics");
   var liBill = document.getElementById("liBilling");
+  var liPerf = document.getElementById("liPerformance");
   liBill.style.backgroundColor = "var(--grey)";
   liStat.style.backgroundColor = "transparent";
+  liPerf.style.backgroundColor = "var(--grey)";
   liStat.style.fontWeight = "bold";
   liBill.style.fontWeight = "normal";
+  liPerf.style.fontWeight = "normal";
+}
+
+function performanceFunction() {
+  var liStat = document.getElementById("liStatistics");
+  var liBill = document.getElementById("liBilling");
+  var liPerf = document.getElementById("liPerformance");
+  liBill.style.backgroundColor = "var(--grey)";
+  liStat.style.backgroundColor = "var(--grey)";
+  liPerf.style.backgroundColor = "transparent";
+  liStat.style.fontWeight = "normal";
+  liBill.style.fontWeight = "normal";
+  liPerf.style.fontWeight = "bold";
 }
 
 

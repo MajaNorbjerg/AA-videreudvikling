@@ -72,6 +72,7 @@ body {
     /* Make body fill the intire screen height and width */
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 
@@ -275,7 +276,7 @@ nav ul {
 
 nav li {
     float: left;
-    width: 49.5%;
+    width: 33%;
     text-align: center;
 }
 
@@ -299,7 +300,7 @@ nav li a:focus {
     border-right: var(--thickBorder);
 }
 
-#liStatistics {
+#liStatistics, #liPerformance {
     border-top: var(--thickBorder);
     border-left: var(--thickBorder);
 }
@@ -596,15 +597,46 @@ tr:hover > td:nth-child(3) {
 /* Admin page */
 #settingsContainer {
     width: 70%;
-    height: 90vh;
+    height: 85vh;
     margin: 2% auto;
     padding: 1%;
     background-color: var(--white);
+    border: var(--thickBorder);
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
-#settingsContainer p {
-    padding: 2% 0;
+
+#forsideLogo{width: 5%;
+float: right;}
+
+#h1Login{font-size: 60px;
+margin-top:10%}
+
+#userID, #password{
+    width: 30%;
+    height:4em;
+    border: var(--thickBorder);
+    display: block;
+    margin: 1% auto;
 }
+
+#help{
+    color: var(--grey);
+    font-style: italic;
+    margin: 0 auto;
+    width: 30%;
+    text-align: right;
+
+}
+
+#btnLogin{width: 30%;
+background-color: var(--lightBlue);
+margin: 2% auto;
+display: block;
+color: var(--lightlightblue);
+height: em;
+font-size: 1.5em;}
 
 
 #forside3 {
