@@ -389,7 +389,7 @@ function newTable() {
       // var result = sortPricatMNJ(pricatMNJ[i]);
 
       // Insert data to the cells from pricat
-      cell1.innerHTML = '<button type="button" class="btn">Export invoice <img src="img/exportblaa.png" alt="Export icon" style="padding-left:1em;"></button>';
+      cell1.innerHTML = '<button type="button" class="btn">Export invoice <img src="img/exportblaa.png" alt="Export icon"></button>';
       cell2.innerHTML = result[3];
       cell3.innerHTML = result[6];
       cell4.innerHTML = result[7];
