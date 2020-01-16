@@ -544,10 +544,29 @@ tr:hover > td:nth-child(3) {
     margin-top: 1em;
 }
 
-/* #dropdown {
-    width: 200px;
-    margin: 2% 42%;
-} */
+.infoIcon {
+position: relative;
+z-index: 24;
+text-decoration: none;
+}
+
+
+.infoIcon span {display: none;
+   
+}
+
+.infoIcon:hover span{display: block;
+    float: right;
+    padding: .5em;
+position: absolute;
+top: 1em;
+left: 8em;
+width: 15em;
+background-color: var(--lightlightblue);
+}
+.infoIcon img {float: right;
+    width: 6%;
+    margin-bottom: 0.5em;}
 
 /* Chart (external css)
 ...........*/
