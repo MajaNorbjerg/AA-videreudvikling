@@ -532,7 +532,7 @@ function generatePDF() {
 
 
   doc.addImage(img, 'jpeg', 400, 20, 150, 50); //specify the image format in the function. Can be one among JPEG/PNG.
-  doc.text('Redemption Center', 40, 110);
+  doc.text('Redemption Center, NY', 40, 110);
   doc.text('Date:' + ' ' + today, 450, 110)
   doc.text('576 Victoria Dr', 40, 130)
   doc.text('Rochester, NY 14604', 40, 150)
