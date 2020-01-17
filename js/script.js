@@ -15,29 +15,29 @@ $(document).ready(newTable);
 
 // Expected data from file
 //......................................................................................
-var pricat = [
-  //Distributor[0];Total[1];ALU[2];PET[3];HDPE[4];Glass[5];Other plactics[6];Other material[7]
-  "CocaCola;738;157;315;132;245;13;0",
-  "Newcastle;249;33;0;0;216;7;0",
-  "Heineken;591;125;104;0;312;0;50",
-  "Carlsberg;576;327;123;0;120;6;0",
-  "Corona;327;126;0;0;201;9;0",
-  "Sommersby;86;45;0;0;54;12;0",
-  "Cristal;78;13;28;7;15;15;0",
-  "Fosters;146;75;17;0;54;0;0",
-  "Guinness;327;126;0;0;201;0;0",
-  "Miller;86;45;0;0;54;13;0",
-  "Pepsi;591;175;50;0;312;0;54",
-  "RedBull;591;125;104;0;312;0;50",
-  "Smirnoff;159;0;0;0;148;0;11",
-  "Sol;146;75;17;0;54;0;0"
-];
+// var pricat = [
+//   //Distributor[0];Total[1];ALU[2];PET[3];HDPE[4];Glass[5];Other plactics[6];Other material[7]
+//   "CocaCola;738;157;315;132;245;13;0",
+//   "Newcastle;249;33;0;0;216;7;0",
+//   "Heineken;591;125;104;0;312;0;50",
+//   "Carlsberg;576;327;123;0;120;6;0",
+//   "Corona;327;126;0;0;201;9;0",
+//   "Sommersby;86;45;0;0;54;12;0",
+//   "Cristal;78;13;28;7;15;15;0",
+//   "Fosters;146;75;17;0;54;0;0",
+//   "Guinness;327;126;0;0;201;0;0",
+//   "Miller;86;45;0;0;54;13;0",
+//   "Pepsi;591;175;50;0;312;0;54",
+//   "RedBull;591;125;104;0;312;0;50",
+//   "Smirnoff;159;0;0;0;148;0;11",
+//   "Sol;146;75;17;0;54;0;0"
+// ];
 
-// Sort and split the pricat
-function sortPricat(pricatLine) {
-  var result = pricatLine.split(";");
-  return result;
-};
+// // Sort and split the pricat
+// function sortPricat(pricatLine) {
+//   var result = pricatLine.split(";");
+//   return result;
+// };
 
 // // Table function
 // //.............................................................
@@ -590,7 +590,7 @@ function generatePDF() {
   doc.text('Machine:' + ' ' + currentMachine, 450, 190)
   doc.text('Batch:' + ' ' + currentBatch, 450, 210)
 
-  doc.save('test.pdf');
+  doc.save('invoice.pdf');
 };
 
 

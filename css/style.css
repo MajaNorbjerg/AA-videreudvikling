@@ -556,6 +556,8 @@ tr:hover>td:nth-child(3) {
 
 .infoIcon span {
     display: none;
+    z-index: 25;
+
 }
 
 .infoIcon:hover span {
