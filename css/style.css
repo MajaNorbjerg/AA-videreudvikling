@@ -355,23 +355,23 @@ strong {
 /* Table icons
 ...........*/
 .rowAlu {
-    background-image: url('../img/d%C3%A5se.png');
+    background-image: url('../img/trekant41ALU.png');
 }
 
 .rowPet {
-    background-image: url('../img/PET.png');
+    background-image: url('../img/trekant80PETNY.png');
 }
 
 .rowHdpe {
-    background-image: url('../img/milk.png');
+    background-image: url('../img/trekant2HDPE.png');
 }
 
 .rowGlass {
-    background-image: url('../img/beer.png');
+    background-image: url('../img/trekant73glassNY.png');
 }
 
 .rowOtherP {
-    background-image: url('../img/ketchup.png');
+    background-image: url('../img/trekant89otherNY.png');
 }
 
 .rowOtherM {
@@ -381,13 +381,18 @@ strong {
 .rowAlu,
 .rowPet,
 .rowHdpe,
+
 .rowGlass {
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: 30%;
+    background-size: 40%;
 }
 
-.rowOtherP,
+.rowOtherP{
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 25%;
+}
 .rowOtherM {
     background-position: right bottom;
     background-repeat: no-repeat;
